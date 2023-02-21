@@ -1,0 +1,212 @@
+%---------------------------------------------------------------------------- 
+%
+%  $Description: General Research Plan Structure $
+%
+%  $Author: dloubach, with great contribution from rbonna $
+%  $Release Date: December 20, 2016 $
+%
+%  O Projeto de Pesquisa deve demonstrar claramente os desafios científicos ou 
+%  técnicos a serem superados pela pesquisa proposta, os meios e métodos para 
+%  isso e a relevância dos resultados esperados para o avanço do conhecimento 
+%  na área.
+%  Máximo 20 páginas.
+%
+%  The research project shall clearly demonstrate the scientific or techinical
+%  chalenges to be overcame by the proposed research, as well as the ways and
+%  methods to achieve so and moreover the expected results relevance to advance
+%  the area knowledgement.
+%  20 pages maximum.
+%---------------------------------------------------------------------------- 
+\documentclass[12pt, a4paper]{article}
+
+% [portuguese|english], level=[undergrad | msc | phd]
+\usepackage[english, level=phd]{general-settings}
+
+% [on | off]
+\usepackage[on]{review-settings}
+
+
+% title definitions
+\newcommand{\researchTitle}{The Great Title of your Great Research}
+\newcommand{\researchTitleOtherLanguage}{O Excelente Título para a sua Excelente Pesquisa}
+
+% research level definitions
+\newcommand{\studentName}{Your name goes here}
+\newcommand{\advisorName}{Advisor's name goes here}
+
+% figures path
+\graphicspath{{./figs/}}
+
+% space between lines
+\linespread{1.3}
+
+\begin{document}
+% our title page
+\makeourtitle
+
+% contents
+\tableofcontents
+
+\newpage
+\section*{Resumo}
+\Dloubach{As you're writting in Brazil, we need to write something in Portuguese (at least this part)}
+Aqui vai o resumo do seu trabalho...\\%
+
+
+\textbf{Palavras chave --} palavra-chave$_1$; ...; palavra-chave$_n$.
+
+
+\newpage
+\section*{\textit{Abstract}}
+\textit{
+  Your abstract goes here.
+}\\%
+
+\textit{\textbf{Keywords --} keyword$_1$, ..., keyword$_n$.}
+
+
+\newpage
+\section{\sectionI}
+\label{sec:intro}
+% Aqui vai a introdução do seu trabalho, contextualizando o leitor no assunto principal da sua pesquisa.
+Here it goes the introduction of your research work, thus making the reader comfortable with the main subject of your topic.
+
+Figure example \ref{fig:perf_flex}:
+
+\begin{figure}[ht]
+	\centering
+	\tikzset{my node/.style={circle, inner color=#1!20, outer color=#1!50,
+	  draw=#1!75, text=black}}
+	\begin{tikzpicture}
+	  \node[my node = red] at (1,5) {GPPs};
+	  \node[my node = blue] at (9,1) {ASICs};
+	  \node[my node = purple] (SA) at (5.5,3.5) {FPGAs};
+		\draw[thick,-latex] (0,0) -- (10,0)
+			node[pos=1,below left]{performance};
+	  \draw[thick,-latex] (0,0) -- (0,6)
+			node[pos=1,above left,rotate = 90]{flexibilidade};
+		\draw[color=gray,double,thick,-latex'] (SA)++(40:1) -- ++(40:1);
+	\end{tikzpicture}
+	\caption{Performance vs. flexibility considering GPPs, ASICs and FPGAs.
+	  Adapted from \cite{Bobda2007a}.}
+	\label{fig:perf_flex}
+\end{figure}
+
+
+\section{\sectionII}
+\label{sec:rel-work}
+% Esta seção deve apresentar, de forma breve, os principais trabalhos relacionados aos conceitos fundamentais da sua pesquisa.
+This section should briefly introduce the main works related to the fundamental concepts of your research.
+
+% Busque dar uma visão ampla de trabalhos básicos fundamentais e também trabalhos mais recentes.
+Your target here is to give an overview of both fundamental research (a.k.a., old and good ones) and the new trends of your topic.
+
+Example:\\%
+The research from \cite{Loubach2016a} introduces a runtime reconfiguration design applicable to embedded systems, targeting avionics systems. It considers both performance and power consumption to partially of fully reconfigure the device. Results show that this design is feasible to be applied to future generations of avionics systems.
+
+
+\section{\sectionIII}
+\label{sec:goal}
+% Dizer claramente o objetivo principal do seu trabalho
+Clearly state the main goal of your work, example:
+
+\begin{quotation}\bf
+  This research work main goal is to give you a good example of how to first write your proposal, aiming the good quality of it and finally its successful acception by the funding agency.  
+\end{quotation}
+
+
+\section{\sectionIV}
+\label{sec:res-scope}
+Example:
+
+This research work scope is basically comprised by the following topics:
+
+\begin{itemize}
+\item To study ``that'';
+\item To study ``this'';
+\item To define the  ``model/desing/.../whatever you're doing here''; and
+\item Test, verify, and validate the ``proposal'' by using a case study.
+\end{itemize}
+
+
+\section{\sectionV}
+\label{sec:schedule}
+%Deve se apresentar aqui as principais atividades desse plano de trabalho, bem como o cronograma proposto para realização destas atividades.
+Introduce here the main activities of your research project, as well as the proposed schedule to accomplish these listed activities.
+
+\begin{enumerate}[A.]
+  \item Undertake courses and disciplines;
+  \item Literature Review;  
+  \item Study the ``x technique, y theorem, z models'';  
+  \item Study and basic tests concerning the ``j'' hardware platform;
+  \item Develop your core proposal, relate to the soul of whatever you're proposing here;
+  \item Devise hardware experiments;
+  \item Tests and verification of your ``proposed model''; and
+  \item Validate and refine the ``proposed model''.
+\end{enumerate}
+
+\begin{table}[ht]
+  \centering
+  \caption{Schedule example, divided into quarters
+    \label{tab:cronograma}}
+  \begin{tabular}{|c||c|c|c|c||c|c|c|c||c|c|c|c||c|c|c|c|}
+    \hline
+    & \multicolumn{4}{|c||}{2016 - 2017}
+    & \multicolumn{4}{|c||}{2017 - 2018}
+    & \multicolumn{4}{|c||}{2018 - 2019}
+    & \multicolumn{4}{|c|}{2019 - 2020} \\ \hline \hline
+    Quarter & 3 & 4 & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 & 1 & 2 &
+      3 & 4 & 1 & 2 \\ \hline \hline
+    A & x & x & \ck & \ck & & & & & & & & & & & & \\ \hline
+    B & x & x & \ck &  & & & & & & & & & & & & \\ \hline
+    C & & & \ck & \ck & & & & & & & & & & & & \\ \hline
+    D & & & \ck & \ck & \ck & & & & & & & & & & & \\ \hline
+    E & & & & & \ck & \ck & \ck & \ck & & & & & & & & \\ \hline
+    F & & & & & & & & \ck & \ck & \ck & & & & & & \\ \hline
+	  G & & & & & & & & & & \ck & \ck & \ck & & & & \\ \hline
+	  H & & & & & & & & & & & & \ck & \ck & \ck & & \\ \hline
+	  Place & \multicolumn{4}{|c||}{Brazil}
+    & \multicolumn{4}{|c||}{Where?}
+    & \multicolumn{4}{|c||}{Brazil}
+    & \multicolumn{4}{|c|}{Brazil} \\ \hline
+\end{tabular}
+\end{table}
+
+Where: \ck~ is to be done; x  finished.
+
+
+\section{\sectionVI}
+\label{sec:parts-methods}
+%Que materiais (placas de hardware, kits de desenvolvimento, itens de medição) são necessários para desenvolver sua pesquisa?
+%Quais os métodos que vc pretente utilizar para desenvolver sua pesquisa? Colocar este tipo de informação nesta seção.
+What are the parts (hardware boards, dev kits, measurement parts) required to develop you research? State them all.
+
+What are the methods you first intend to use here? This section is all about these.
+
+
+\section{\sectionVII}
+\label{sec:result-analysis}
+% Como verificar/analisar se o que vc produziu está correto? \textit{Benchmark} disponível na literatura, estudos comparativos, reprodução de pesquisas? Como garantir a corretude dos resultados. Como verificar quão bom está o seu trabalho em relação ao que já existe atualmente?
+How one can verify/analyze/check if what you've produced is correct? Available benchmark literature, comparative studies, research repeatable? How to assure you results' correctness? How to verify how good your work is compared to what was done before and currently?
+
+
+\section{\sectionVIII}
+\label{sec:abroad-internship}
+% Eventual estágio no exterior dizendo onde, qual o professor supervisor e as devidas justificativas para posterior solicitação formal do estágio de pesquisa no exterior.
+Eventually, if you're planning to go abroad, here is your chance to justify it including where to go (\textit{e.g.,} institution name) and the name/contact of your possible supervisor abroad.
+
+
+\section{\sectionIX}
+\label{sec:general-notes}
+% Se for o caso, colocar aqui informações relevantes que clarificam algum ponto da sua pesquisa.
+If applicable, you should place here with relevant notes needs to clarify any point of your research work.
+
+
+% references
+\bibliographystyle{ieeetr}
+\bibliography{refs/references}
+
+% todo list
+\listoftodos
+
+\end{document}
