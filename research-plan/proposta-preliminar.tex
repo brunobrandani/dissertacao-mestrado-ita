@@ -11,32 +11,58 @@ Análise e comparação de ferramentas e linguagens de programação no desenvol
 \centerline{\textbf{Proposta de Pesquisa}}
 \centerline{\textcolor{red}{[utilizar até 3 páginas] }}
 
+
+% ----------------------------------------------
+% Pergunta 1 - Área de Interesse
 \noindent
 \textbf{1. Área de Interesse}\\
 \noindent
 \textcolor{red}{identificar a área e a linha de pesquisa em que se enquadra o tema proposto}
 \\
 Área: Design de Sistemas Embarcados e Computação Reconfigurável\\
-Linha de Pesquisa: Desenvolvimento de Sistemas Heterogêneos\\
-
+Linha de Pesquisa: Desenvolvimento de Sistemas Heterogêneos - Síntese de alto-nível\\
+Palavras-chave: Modelos de computação (MoC) formais; Síntese de alto-nível (HLS); Sistemas embarcados; Linguagem embarcada de domínio específico (EDSL); Sistemas heterogêneos\\
+% ----------------------------------------------
+% Pergunta 2 - Contextualização e Motivação
 \noindent
 \textbf{2. Contextualização e Motivação}\\
 \noindent
-\textcolor{red}{descrever o contexto da pesquisa e apresentar o problema que será abordado embasando-se em referências bibliográficas]}
-\\
+\textcolor{red}{descrever o contexto da pesquisa e apresentar o problema que será abordado embasando-se em referências bibliográficas}
 
+Sistemas embarcados estão atualmente presentes em diversas áreas, muitas vezes desempenhando papéis críticos, como por exemplo nos setores aeronáutico, automotivo, médico, entre outros. Além da confiabilidade exigida de tais sistemas, temos uma demanda alta por baixo consumo de energia, alta performance e custos reduzidos.
+
+Do ponto de vista do hardware, está cada vez mais difícil o aprimoramento da performance nas arquiteturas de computadores, principalmente pelo fim da "Escala de Dennard", pelo "Silício escuro" e a considerável desaceleração da "Lei de Moore" \cite{Loubach2022a}. A adoção de arquiteturas de domínio específico (DSA), juntamente com linguagens de domínio específico (DSL), é uma abordagem para contornar esse problema. Diferente de uma arquitetura de propósito geral, a DSA permite que o hardware possa ser direcionado e otimizado até mesmo em tempo de execução para um domínio específico \cite{Loubach2019a}.
+
+Modelar e implementar esses sistemas não é simples, principalmente quando tratamos de uma classe específica de hardware, os chamados sistemas heterogêneos. Compostos por um dispositivo programável (controlado por uma linguagem de alto nível) e por um dispositivo reconfigurável (permite a reconfiguração do hardware através de interruptores de baixo nível) \cite{Loubach2016a}, proporcionam uma interessante combinação entre flexibilidade e performance, em troca do aumento da complexidade durante o desenvolvimento das aplicações.\\
+
+% ----------------------------------------------
+% Pergunta 3 - Objetivo da Pesquisa
 \noindent
 \textbf{3. Objetivo da Pesquisa}\\
 \noindent
 \textcolor{red}{identificar o objetivo do trabalho de pesquisa proposto de forma coerente à solução do problema de pesquisa anteriormente especificado, podendo discriminá-lo em objetivo geral e objetivos específicos, para uma melhor compreensão, caso necessário}
-\\
 
+Considerando a complexidade dos sistemas a serem desenvolvidos, juntamente com a criticidade de suas aplicações e os níveis de desempenho e custo esperados, é necessário que seja adotada uma especificação de alto nível do sistema, utilizando modelos formais de computação, que possa ao mesmo tempo  ser implementável em um dado hardware alvo.
+
+A abordagem por síntese de alto-nível (high-level systesis - HLS) permite que as etapas de design e especificação de tais sistemas foquem nas funcionalidades e requisitos que o sistema necessita fornecer, ao mesmo tempo que oferece um modelo executável e passível de síntese em uma linguagem de descrição de hardware (HDL) de forma automatizada \cite{Loubach2022a}.
+
+O objetivo da pesquisa é estudar as novas ferramentas e linguagens disponíveis que possibilitam a síntese de alto-nível, i.e. a especificação do sistema através de modelos formais de computação, a criação de um modelo executável e a geração de código de implementação em hardware de forma automatizada. O estudo abordará os impactos que cada ferramenta/linguagem gera na performance do sistema, uma vez que tal abordagem aumenta o número de camadas de abstração no sistema entre o modelo de alto-nível e o código gerado ao final do processo.
+
+Um framework existente é o ForSyDe-Deep, uma linguagem profundamente embarcada de domínio específico (deep EDSL), desenvolvida utilizando-se dos paradigmas da programação funcional através da linguagem Haskell. \cite{ForSyDe-Deep}
+
+Outro framework a ser analisado é o Ptolemy II, o qual visa modelar e simular sistemas heterogêneos utilizando paradigmas da programação imperativa e orientada a objetos, tendo Java como sua base \cite{PtolemyII}.
+
+% ----------------------------------------------
+% Pergunta 4 - Informações Complementares
 \noindent
 \textbf{4. Informações Complementares}\\
 \noindent
 \textcolor{red}{Campo opcional onde podem ser apresentadas informações adicionais sobre a metodologia que se pretende desenvolver e os resultados esperados, identificado em referências bibliográficas consultadas ou testes/avaliações preliminares já obtidos/as pelo autor} 
 \\
 
+
+% ----------------------------------------------
+% Pergunta 5 - Aplicação dos Conhecimentos
 \noindent
 \textbf{5. Aplicação dos Conhecimentos}\\
 \noindent
