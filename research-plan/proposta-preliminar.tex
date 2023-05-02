@@ -1,70 +1,72 @@
 \noindent
-\textbf{Título:} \textcolor{red}{título preliminar para a pesquisa – até 2 linhas} \\
-Análise e comparação de ferramentas e linguagens de programação no desenvolvimento de sistemas heterogêneos\\
+\textbf{Título:} Análise e comparação de ferramentas de síntese de alto nível e linguagens de programação no contexto de desenvolvimento de sistemas embarcados heterogêneos\\
 \textbf{Nome:} Bruno Basso Brandani \\
 \textbf{Curso:} Mestrado \\
 \textbf{Programa:} Pós-Graduação em Engenharia Eletrônica e Computação (PG/EEC) \\
 \textbf{Área de concentração:} Informática (EEC-I) \\
-\textbf{Data:} \textcolor{red}{XX/Maio/2023} \\
+\textbf{Data:} \today \\
 \textbf{Potencial orientador:} Denis S. Loubach \\
 
 \centerline{\textbf{Proposta de Pesquisa}}
-\centerline{\textcolor{red}{[utilizar até 3 páginas] }}
-
+\centerline{}
 
 % ----------------------------------------------
 % Pergunta 1 - Área de Interesse
 \noindent
 \textbf{1. Área de Interesse}\\
 \noindent
-\textcolor{red}{identificar a área e a linha de pesquisa em que se enquadra o tema proposto}
-\\
 Área: Design de Sistemas Embarcados e Computação Reconfigurável\\
-Linha de Pesquisa: Desenvolvimento de Sistemas Heterogêneos - Síntese de alto-nível\\
-Palavras-chave: Modelos de computação (MoC) formais; Síntese de alto-nível (HLS); Sistemas embarcados; Linguagem embarcada de domínio específico (EDSL); Sistemas heterogêneos\\
+Linha de Pesquisa: Software e sistemas de informação\\
+Palavras-chave: \emph{formal models of computation} (MoC); \emph{High-level synthesis} (HLS); \emph{Embedded systems}; \emph{Embedded domain-specific languages} (EDSL); \emph{Heterogeneous system}.\\
+
 % ----------------------------------------------
 % Pergunta 2 - Contextualização e Motivação
 \noindent
 \textbf{2. Contextualização e Motivação}\\
 \noindent
-\textcolor{red}{descrever o contexto da pesquisa e apresentar o problema que será abordado embasando-se em referências bibliográficas}
+Sistemas embarcados estão atualmente presentes em diversas áreas, muitas vezes desempenhando papéis críticos, como por exemplo nos setores aeronáutico, automotivo, médico, entre outros. Além da confiabilidade exigida de tais sistemas, temos uma demanda alta por baixo consumo de energia, alta performance e custos reduzidos \cite{Horita}.
 
-Sistemas embarcados estão atualmente presentes em diversas áreas, muitas vezes desempenhando papéis críticos, como por exemplo nos setores aeronáutico, automotivo, médico, entre outros. Além da confiabilidade exigida de tais sistemas, temos uma demanda alta por baixo consumo de energia, alta performance e custos reduzidos.
+\noindent
+Do ponto de vista do hardware, está cada vez mais difícil o aprimoramento da performance nas arquiteturas de computadores, principalmente com o fim da Escala de Dennard, pelo \emph{Dark Silicon} e a considerável desaceleração da Lei de Moore \cite{Loubach2022a}. A adoção de arquiteturas de domínio específico (DSA), juntamente com linguagens de domínio específico (DSL), se torna uma possível abordagem para contornar esse problema. Diferente de uma arquitetura de propósito geral, DSA permite que o hardware se adapte e se otimize em tempo de execução para um domínio específico \cite{Loubach2019a}.
 
-Do ponto de vista do hardware, está cada vez mais difícil o aprimoramento da performance nas arquiteturas de computadores, principalmente pelo fim da "Escala de Dennard", pelo "Silício escuro" e a considerável desaceleração da "Lei de Moore" \cite{Loubach2022a}. A adoção de arquiteturas de domínio específico (DSA), juntamente com linguagens de domínio específico (DSL), é uma abordagem para contornar esse problema. Diferente de uma arquitetura de propósito geral, a DSA permite que o hardware possa ser direcionado e otimizado até mesmo em tempo de execução para um domínio específico \cite{Loubach2019a}.
+\noindent
+Modelar e implementar tais sistemas não é trivial, principalmente quando tratamos de uma classe específica de hardware, os chamados sistemas heterogêneos. Compostos por um dispositivo programável (programável com linguagens de alto nível) e por um dispositivo reconfigurável (permite a reconfiguração do hardware em nível de circuito eletrônico) \cite{Loubach2016a}, proporcionam uma interessante combinação entre flexibilidade e performance.
 
-Modelar e implementar esses sistemas não é simples, principalmente quando tratamos de uma classe específica de hardware, os chamados sistemas heterogêneos. Compostos por um dispositivo programável (controlado por uma linguagem de alto nível) e por um dispositivo reconfigurável (permite a reconfiguração do hardware através de interruptores de baixo nível) \cite{Loubach2016a}, proporcionam uma interessante combinação entre flexibilidade e performance, em troca do aumento da complexidade durante o desenvolvimento das aplicações.\\
+\noindent
+Considerando a complexidade destes sistemas, juntamente com a criticidade de suas aplicações e os níveis de desempenho e custo esperados, é interessante que seja adotada uma especificação de alto nível do sistema, utilizando modelos formais de computação e que possa ao mesmo tempo ser implementada em um hardware.
+
+\noindent
+A abordagem por síntese de alto nível (\emph{high-level synthesis} - HLS) permite que as etapas de design e especificação foquem nas funcionalidades e requisitos que o sistema requer e ao mesmo tempo ofereça um modelo executável e passível de síntese em linguagem de descrição de hardware (HDL) de forma automatizada \cite{Loubach2022a}.\\
 
 % ----------------------------------------------
 % Pergunta 3 - Objetivo da Pesquisa
 \noindent
 \textbf{3. Objetivo da Pesquisa}\\
 \noindent
-\textcolor{red}{identificar o objetivo do trabalho de pesquisa proposto de forma coerente à solução do problema de pesquisa anteriormente especificado, podendo discriminá-lo em objetivo geral e objetivos específicos, para uma melhor compreensão, caso necessário}
+O objetivo da pesquisa é estudar ferramentas e linguagens de alto nível que possibilitem síntese de alto nível, i.e. a especificação do sistema através de modelos formais de computação, a criação de um modelo executável e a síntese em hardware de forma automatizada.
 
-Considerando a complexidade dos sistemas a serem desenvolvidos, juntamente com a criticidade de suas aplicações e os níveis de desempenho e custo esperados, é necessário que seja adotada uma especificação de alto nível do sistema, utilizando modelos formais de computação, que possa ao mesmo tempo  ser implementável em um dado hardware alvo.
-
-A abordagem por síntese de alto-nível (high-level systesis - HLS) permite que as etapas de design e especificação de tais sistemas foquem nas funcionalidades e requisitos que o sistema necessita fornecer, ao mesmo tempo que oferece um modelo executável e passível de síntese em uma linguagem de descrição de hardware (HDL) de forma automatizada \cite{Loubach2022a}.
-
-O objetivo da pesquisa é estudar as novas ferramentas e linguagens disponíveis que possibilitam a síntese de alto-nível, i.e. a especificação do sistema através de modelos formais de computação, a criação de um modelo executável e a geração de código de implementação em hardware de forma automatizada. O estudo abordará os impactos que cada ferramenta/linguagem gera na performance do sistema, uma vez que tal abordagem aumenta o número de camadas de abstração no sistema entre o modelo de alto-nível e o código gerado ao final do processo.
-
-Um framework existente é o ForSyDe-Deep, uma linguagem profundamente embarcada de domínio específico (deep EDSL), desenvolvida utilizando-se dos paradigmas da programação funcional através da linguagem Haskell. \cite{ForSyDe-Deep}
-
-Outro framework a ser analisado é o Ptolemy II, o qual visa modelar e simular sistemas heterogêneos utilizando paradigmas da programação imperativa e orientada a objetos, tendo Java como sua base \cite{PtolemyII}.
+\noindent
+O estudo abordará os impactos que cada ferramenta e linguagem geram na performance do sistema, uma vez que tal abordagem aumenta o número de camadas de abstração entre o modelo de alto nível e o código gerado ao final do processo.\\
 
 % ----------------------------------------------
 % Pergunta 4 - Informações Complementares
 \noindent
 \textbf{4. Informações Complementares}\\
 \noindent
-\textcolor{red}{Campo opcional onde podem ser apresentadas informações adicionais sobre a metodologia que se pretende desenvolver e os resultados esperados, identificado em referências bibliográficas consultadas ou testes/avaliações preliminares já obtidos/as pelo autor} 
-\\
+Um framework existente é o ForSyDe-Deep, uma linguagem profundamente embarcada de domínio específico (\emph{deep} EDSL), desenvolvida utilizando-se dos paradigmas da programação funcional usando linguagem Haskell \cite{Loubach2022a}\cite{ForSyDe-Deep}.
 
+\noindent
+Outro framework a ser analisado é o Ptolemy II, o qual visa modelar e simular sistemas heterogêneos utilizando paradigmas da programação imperativa e orientada a objetos, tendo Java como sua base \cite{PtolemyII}.\\
 
 % ----------------------------------------------
 % Pergunta 5 - Aplicação dos Conhecimentos
 \noindent
 \textbf{5. Aplicação dos Conhecimentos}\\
 \noindent
-\textcolor{red}{Campo opcional, destinado à descrição da visão de aplicação dos conhecimentos advindos do trabalho de pesquisa a ser realizado pelo candidato}
-\\
+É essencial garantir a corretude no desenvolvimento de sistemas críticos, tais quais sistemas médicos, automotivos e aeronáuticos. Esses sistemas tem seus desenvolvimentos pautados por normas, como no caso da RTCA DO-178C para o desenvolvimento de software aeronáutico. Para um software com condição de falha classificada como catastrófica (\emph{Design Assurance Level} A), existem 71 objetivos associados ao processo, incluindo etapas de design, desenvolvimento, verificação e testes \cite{DO-178}.
+
+\noindent
+Nesses sistemas, a síntese de alto nível pode contribuir com elevação da qualidade do produto, ao mesmo tempo que permite o cumprimento dos objetivos citados. Garantir que a fase de design e especificação de requisitos esteja desassociada da implementação/síntese oferece maior maturidade e qualidade ao processo. A abordagem de \emph{correct-by-construction} é alcançada por meio do formalismo proporcionado pelos modelos de computação utilizados como base de HLS \cite{Edwards}.
+
+\noindent
+Também é interessante o ganho de agilidade no processo de desenvolvimento que tal abordagem propicia, uma vez que etapas realizadas manualmente (como por exemplo implementação de requisitos em código manual) podem ser automatizadas sem perda de qualidade. Por meio da qualificação de ferramentas que realizam HLS é possível até mesmo eliminar em partes a intervenção humana em algumas etapas do processo.
