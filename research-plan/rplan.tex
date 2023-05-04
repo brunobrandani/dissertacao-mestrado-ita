@@ -17,30 +17,15 @@
 %  the area knowledgement.
 %  20 pages maximum.
 %---------------------------------------------------------------------------- 
-\documentclass[12pt, a4paper]{article}
-
-% [portuguese|english], level=[undergrad | msc | phd]
-\usepackage[english, level=phd]{general-settings}
-
-% [on | off]
-\usepackage[on]{review-settings}
-
 
 % title definitions
-\newcommand{\researchTitle}{The Great Title of your Great Research}
-\newcommand{\researchTitleOtherLanguage}{O Excelente Título para a sua Excelente Pesquisa}
+\newcommand{\researchTitle}{High-level Programming Languages in Heterogeneous Systems Development}
+\newcommand{\researchTitleOtherLanguage}{Linguagens de Programação de Alto-nível no Desenvolvimento de Sistemas Heterogêneos}
 
 % research level definitions
-\newcommand{\studentName}{Your name goes here}
-\newcommand{\advisorName}{Advisor's name goes here}
+\newcommand{\studentName}{Bruno B. Brandani}
+\newcommand{\advisorName}{Denis S. Loubach}
 
-% figures path
-\graphicspath{{./figs/}}
-
-% space between lines
-\linespread{1.3}
-
-\begin{document}
 % our title page
 \makeourtitle
 
@@ -49,8 +34,17 @@
 
 \newpage
 \section*{Resumo}
-\Dloubach{As you're writting in Brazil, we need to write something in Portuguese (at least this part)}
 Aqui vai o resumo do seu trabalho...\\%
+\\
+\Bbrandani {\\
+1.Qual o seu tópico e como ele se encaixa no referencial teórico?\\
+2.Em que a sua pesquisa difere das outras? (gap) / Qual a contribuição do seu artigo?\\
+3.Qual é a questão de pesquisa resolvida pelo artigo?\\
+4.Como você respondeu a questão de pesquisa? (metodologia)\\
+5.Qual foi o resultado encontrado?\\
+6.Qual a implicação da sua pesquisa\\
+% Fonte: https://www.dropbox.com/s/noxvyc5kh13d4lb/Dicas%20para%20escrever%20bem%20em%20ingl%C3%AAs.pptx?dl=0
+}
 
 
 \textbf{Palavras chave --} palavra-chave$_1$; ...; palavra-chave$_n$.
@@ -59,17 +53,17 @@ Aqui vai o resumo do seu trabalho...\\%
 \newpage
 \section*{\textit{Abstract}}
 \textit{
-  Your abstract goes here.
+  The graduate student will investigate new high-level programming languages and even dialects, and tools to fill a gap in heterogeneous systems development. At the same time, the impacts on performance have to be taken into account as the number of layers in the system development increases, due to automatic code generation and high-level modeling.
 }\\%
 
-\textit{\textbf{Keywords --} keyword$_1$, ..., keyword$_n$.}
+\textit{\textbf{Keywords --} heterogeneous systems$_1$, FPGA$_2$, MoC$_3$, high-level programming language$_4$.}
 
 
 \newpage
 \section{\sectionI}
 \label{sec:intro}
 % Aqui vai a introdução do seu trabalho, contextualizando o leitor no assunto principal da sua pesquisa.
-Here it goes the introduction of your research work, thus making the reader comfortable with the main subject of your topic.
+Here it goes the introduction of your research work, thus making the reader comfortable with the main subject of your topic. Adicionando mais texto.
 
 Figure example \ref{fig:perf_flex}:
 
@@ -191,22 +185,10 @@ How one can verify/analyze/check if what you've produced is correct? Available b
 
 
 \section{\sectionVIII}
-\label{sec:abroad-internship}
-% Eventual estágio no exterior dizendo onde, qual o professor supervisor e as devidas justificativas para posterior solicitação formal do estágio de pesquisa no exterior.
-Eventually, if you're planning to go abroad, here is your chance to justify it including where to go (\textit{e.g.,} institution name) and the name/contact of your possible supervisor abroad.
-
-
-\section{\sectionIX}
 \label{sec:general-notes}
 % Se for o caso, colocar aqui informações relevantes que clarificam algum ponto da sua pesquisa.
 If applicable, you should place here with relevant notes needs to clarify any point of your research work.
 
 
-% references
-\bibliographystyle{ieeetr}
-\bibliography{refs/references}
-
 % todo list
 \listoftodos
-
-\end{document}

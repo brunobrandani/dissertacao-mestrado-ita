@@ -1,0 +1,112 @@
+\noindent
+\textbf{Título:} Análise e Comparação de Ferramentas de Síntese de Alto Nível e
+Linguagens de Programação no Contexto de Desenvolvimento de Sistemas Embarcados
+Heterogêneos\\
+\textbf{Nome:} Bruno Basso Brandani \\
+\textbf{Curso:} Mestrado \\
+\textbf{Programa:} Pós-Graduação em Engenharia Eletrônica e Computação (PG/EEC) \\
+\textbf{Área de concentração:} Informática (EEC-I) \\
+\textbf{Data:} \today \\
+\textbf{Potencial orientador:} Prof. Dr. Denis S. Loubach \\
+
+\centerline{\textbf{Proposta de Pesquisa}}
+\centerline{}
+
+% ----------------------------------------------
+% Pergunta 1 - Área de Interesse
+\noindent
+\textbf{1. Área de Interesse}\\
+\noindent
+Área: Design de Sistemas Embarcados e Computação Reconfigurável\\
+Linha de Pesquisa: Software e Sistemas de Informação\\
+Palavras-chave: \emph{formal models of computation} (MoC); \emph{High-level synthesis} (HLS); \emph{Embedded systems}; \emph{Embedded domain-specific languages} (EDSL); \emph{Heterogeneous system}.\\
+
+% ----------------------------------------------
+% Pergunta 2 - Contextualização e Motivação
+\noindent
+\textbf{2. Contextualização e Motivação}\\
+% \noindent
+Sistemas embarcados estão atualmente presentes em diversas áreas, muitas vezes desempenhando papéis críticos, como por exemplo nos setores aeronáutico, automotivo, médico, entre outros. Além da confiabilidade exigida de tais sistemas, existe uma demanda alta por baixo consumo de energia, alta performance e custos reduzidos \cite{Horita}.
+
+% \noindent
+Do ponto de vista do hardware, está cada vez mais difícil o aprimoramento da
+performance nas arquiteturas de computadores, principalmente com o fim da Escala
+de Dennard, pelo \emph{dark silicon} e a considerável desaceleração da Lei de
+Moore \cite{Loubach2022a}. A adoção de arquiteturas de domínio específico
+(\emph{domain-specific architecture} - DSA), juntamente com linguagens de
+domínio específico (\emph{domain-specific languages} - DSL), se torna uma
+possível abordagem para contornar esse problema. Diferente de uma arquitetura de
+propósito geral, DSA permite que o hardware se adapte e se otimize em tempo de
+execução para um domínio específico \cite{Loubach2019a}.
+
+% \noindent
+Modelar e implementar tais sistemas não é trivial, principalmente quando se
+trata de uma classe específica de hardware, os chamados sistemas
+heterogêneos. Compostos por dispositivos programáveis (programáveis com
+linguagens de alto nível) e dispositivos reconfiguráveis (reconfiguração do
+hardware em nível de circuito eletrônico) \cite{Loubach2016a}, sistemas com
+hardware heterogêneo proporcionam uma interessante combinação entre
+flexibilidade e performance.
+
+% \noindent
+Considerando a complexidade destes sistemas, juntamente com a criticidade de suas aplicações e os níveis de desempenho e custo esperados, é interessante que seja adotada uma especificação de alto nível do sistema, utilizando modelos formais de computação e que possa ao mesmo tempo ser implementada em um hardware.
+
+% \noindent
+A abordagem por síntese de alto nível (\emph{high-level synthesis} - HLS)
+permite que as etapas de design e especificação foquem nas funcionalidades e
+requisitos que o sistema requer e ao mesmo tempo ofereça um modelo executável e
+passível de síntese em linguagem de descrição de hardware (\emph{hardware
+  description language} - HDL) de forma automatizada \cite{Loubach2022a}.\\
+
+% ----------------------------------------------
+% Pergunta 3 - Objetivo da Pesquisa
+\noindent
+\textbf{3. Objetivo da Pesquisa}\\
+% \noindent
+O objetivo da pesquisa é \textbf{estudar ferramentas e linguagens de alto nível
+  que possibilitem síntese de alto nível}, i.e. a especificação do sistema
+através de modelos formais de computação, a criação de um modelo executável e a
+síntese em \textbf{hardware de forma automatizada}.
+
+% \noindent
+O estudo abordará os impactos que cada ferramenta e linguagem geram na performance do sistema, uma vez que tal abordagem aumenta o número de camadas de abstração entre o modelo de alto nível e o código gerado ao final do processo.\\
+
+% ----------------------------------------------
+% Pergunta 4 - Informações Complementares
+\noindent
+\textbf{4. Informações Complementares}\\
+% \noindent
+Um framework existente é o \emph{ForSyDe}. Ele inclui o \emph{ForSyDe-Deep}, uma
+linguagem profundamente embarcada de domínio específico (\emph{deep} EDSL),
+desenvolvida utilizando-se dos paradigmas da programação funcional usando
+linguagem Haskell \cite{Loubach2022a}\cite{ForSyDe-Deep}.
+
+% \noindent
+Outro framework a ser analisado é o \emph{Ptolemy II}, o qual visa modelar e simular sistemas heterogêneos utilizando paradigmas da programação imperativa e orientada a objetos, tendo Java como sua base \cite{PtolemyII}.\\
+
+% ----------------------------------------------
+% Pergunta 5 - Aplicação dos Conhecimentos
+\noindent
+\textbf{5. Aplicação dos Conhecimentos}\\
+% \noindent
+É essencial garantir a corretude no desenvolvimento de sistemas críticos, tais quais sistemas médicos, automotivos e aeronáuticos. Estes sistemas tem seus desenvolvimentos pautados por normas, como no caso da RTCA DO-178C para o desenvolvimento de software aeronáutico. Para um software com condição de falha classificada como catastrófica (\emph{design assurance level} A), existem 71 objetivos associados ao processo, incluindo etapas de design, desenvolvimento, verificação e testes \cite{DO-178}.
+
+% \noindent
+Nestes sistemas, a síntese de alto nível pode contribuir com elevação da
+qualidade do produto, ao mesmo tempo que permite o cumprimento dos objetivos
+citados. Garantir que a fase de design e especificação de requisitos esteja
+desassociada da implementação e síntese oferece maior maturidade e qualidade ao processo. A abordagem de \emph{correct-by-construction} é alcançada por meio do formalismo proporcionado pelos modelos de computação utilizados como base de HLS \cite{Edwards}.
+
+% \noindent
+Também é interessante o ganho de agilidade no processo de desenvolvimento que
+tal abordagem propicia, uma vez que etapas realizadas manualmente (como por
+exemplo implementação de requisitos em código manual) podem ser automatizadas
+sem perda de qualidade. Por meio da qualificação de ferramentas que realizam HLS
+é possível até mesmo eliminar em partes a intervenção humana em algumas etapas
+do processo.
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

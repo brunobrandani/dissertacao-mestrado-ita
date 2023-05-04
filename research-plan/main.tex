@@ -1,0 +1,24 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{times}
+
+% [portuguese|english], level=[undergrad | msc | phd]
+\usepackage[portuguese, level=msc]{general-settings}
+
+% [on | off]
+\usepackage[on]{review-settings}
+
+% figures path
+\graphicspath{{./figs/}}
+
+% space between lines
+\linespread{1.3}
+
+\begin{document}
+%\include{rplan}
+\input{proposta-preliminar}
+
+% references
+\bibliographystyle{ieeetr}
+\bibliography{refs/references}
+
+\end{document}

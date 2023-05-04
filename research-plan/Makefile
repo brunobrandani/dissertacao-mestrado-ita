@@ -1,6 +1,6 @@
 # General Makefile rules
 
-TOPIC   = rplan
+TOPIC   = main#rplan
 MAIN    = $(TOPIC)
 
 BIBDIR       = refs
